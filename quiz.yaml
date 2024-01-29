@@ -1,0 +1,64 @@
+---
+- name: ansible quiz playbook file
+  hosts: centos
+  become: true
+ 
+  tasks:
+    - name: install packages
+      yum:
+        name: git
+        name: httpd
+        name: curl
+        state: present
+
+    - name: start httpd
+      service:
+        name: httpd
+        state: started
+
+    - name: CentOS > firewalld
+      service:
+        name: firewalld
+        state: stopped
+        enabled: no
+
+    - name: git clone & pull
+      git:
+        repo: "https://github.com/ARAOLGA/ansiblelab3.git"
+        dest: /var/www/html/ansiblelab3
+        clone: yes
+        update: yes
+      register: git_result
+
+    - name: Display Git status
+      debug:
+        var: git_result.stdout_lines
+
+    - name: git 변경 확인하고 pull
+      debug:
+        msg: "Changes pulled from Git repository"
+      when: git_result.changed
+      notify:
+        - triggers1
+
+    - name: Display debug information
+      ansible.builtin.debug:
+        var: local_ansible_html
+
+  handlers:
+    - name: triggers1
+      service:
+        name: httpd
+        state: restarted
+      register: resultd
+      notify:
+        - result
+    - name: result
+      debug:
+        msg:
+          changed: "{{ resultd.changed }}"
+          state: "{{ resultd.status.ActiveState }}"
+          pid: "{{ resultd.status.MainPID }}"
+          description: "{{ resultd.status.Description }}"
+
+

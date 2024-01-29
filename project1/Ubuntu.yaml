@@ -1,0 +1,22 @@
+- name: nginx installation
+  action: "{{ ansible_pkg_mgr }} name=nginx state=present update_cache=yes"
+
+- name: curl nginx.com
+  get_url:
+    url: https://www.nginx.com
+    dest: /var/www/html/index.html
+    mode: 0644
+  notify:
+    - restart web # curl 로 끌어온 내용에 변경이 있다면 'restart web' 실행해라!
+
+- name: stop ufw
+  service:
+    name: ufw
+    state: stopped
+    enabled: no
+
+- name: 변수 출력
+  debug:
+    msg:
+      - "{{ ansible_hostname }} : {{ test_var }}"
+
