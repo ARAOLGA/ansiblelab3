@@ -8,20 +8,41 @@
 # hlsearch on (H) or off (h):
 ~H
 # Last Search Pattern:
-~MSle0~/local
+~MSle0~/ansible_host
+
+# Last Substitute String:
+$
 
 # Command Line History (newest to oldest):
 :q
 :wq
 :Q
+:q!
 :w
 :set nu
 :qw
-:q!
 :W
 :Wq
 
 # Search String History (newest to oldest):
+?/ansible_host
+?/10.10.1
+?/sdfsdfs
+?/ansible_di
+?/asdfsadfsadf
+?/ansible_
+?/ansible
+?/ansible_con
+?/10.10.
+?/contr
+?/contribution
+?/10.10.10.12
+?/salkfjdslkfjsdaklf
+?/ip
+?/asdfsfdsfdsf
+?/noti
+?/sdfasfdsfsdf
+?/html
 ?/local
 ?/httpd
 ?/sdfafewfewf
@@ -35,270 +56,307 @@
 
 # Registers:
 "0	LINE	0
-	    - name: 변수에 따른 배포판과 작업파일  선택
-	      include_tasks: "{{ lnx_name }}.yaml"
+		<p>{{ pub }}</p>
 ""1	LINE	0
-	        repo: "https://github.com/taewoocode/ansiblelab3.git"
+	        name: curl
 "2	LINE	0
-	        - triggers1
+	        state: present
 "3	LINE	0
-	      notify:
+	        name: httpd
 "4	LINE	0
 	
 "5	LINE	0
-	       state: directory
+	pri: 
 "6	LINE	0
-	       path: /var/www/html/ansiblelab3
+	" ============================================================================
+	" Netrw Directory Listing                                        (netrw v149)
+	"   /home/vagrant/project1/roles/nginx/templates
+	"   Sorted by      name
+	"   Sort sequence: [\/]$,\<core\%(\.\d\+\)\=\>,\.h$,\.c$,\.cpp$,\~\=\*$,*,\.o$,\.obj$,\.info$,\.swp$,\.bak$,\~$
+	"   Quick Help: <F1>:help  -:go up dir  D:delete  R:rename  s:sort-by  x:exec
+	" ============================================================================
+	../
+	./
+	index.j2
+	.swp
 "7	LINE	0
-	      file:
+	    - restart nginx
 "8	LINE	0
-	    - name: create git repo
+	  
 "9	LINE	0
-	        state: started 
+		<p>ip1: {{ }}</p>
 "-	CHAR	0
-	d
+	b
 
 # File marks:
-'0  52  4  ~/pquiz.yaml
-'1  1  10  ~/index.html
-'2  5  6  ~/pquiz.yaml
-'3  19  10  ~/quiz.yaml
-'4  66  19  ~/pquiz.yaml
-'5  1  0  ~/quiz11.yml
-'6  61  10  ~/quiz.yaml
-'7  25  21  ~/nginx_install.yaml
-'8  12  4  ~/Ubuntu.yaml
-'9  14  22  ~/quiz.yaml
+'0  49  13  ~/quiz.yaml
+'1  20  0  ~/quiz.yaml
+'2  2  17  ~/index.html
+'3  9  15  ~/quiz.yaml
+'4  48  0  ~/quiz.yaml
+'5  11  6  ~/project1/roles/nginx/templates/index.j2
+'6  11  0  ~/project1/roles/nginx/vars/main.yml
+'7  10  9  ~/project1/roles/nginx/templates/index.j2
+'8  9  14  ~/project1/roles/nginx/templates/index.j2
+'9  1  0  ~/project1/roles/nginx/templates/ma
 
 # Jumplist (newest first):
--'  52  4  ~/pquiz.yaml
--'  53  13  ~/pquiz.yaml
--'  1  0  ~/pquiz.yaml
--'  38  19  ~/pquiz.yaml
--'  65  20  ~/pquiz.yaml
--'  63  14  ~/pquiz.yaml
--'  61  20  ~/pquiz.yaml
--'  57  16  ~/pquiz.yaml
--'  55  12  ~/pquiz.yaml
--'  26  14  ~/pquiz.yaml
--'  16  14  ~/pquiz.yaml
--'  14  19  ~/pquiz.yaml
--'  12  19  ~/pquiz.yaml
--'  5  2  ~/pquiz.yaml
--'  1  10  ~/index.html
--'  66  6  ~/pquiz.yaml
--'  19  10  ~/quiz.yaml
--'  61  10  ~/quiz.yaml
--'  1  0  ~/quiz11.yml
--'  14  4  ~/quiz.yaml
--'  25  21  ~/nginx_install.yaml
--'  10  0  ~/nginx_install.yaml
--'  12  4  ~/Ubuntu.yaml
--'  20  4  ~/Ubuntu.yaml
--'  17  8  ~/quiz.yaml
--'  12  8  ~/quiz.yaml
--'  64  0  ~/quiz.yaml
--'  26  6  ~/quiz.yaml
--'  62  10  ~/quiz.yaml
--'  30  8  ~/quiz.yaml
--'  1  19  ~/group_vars/koreaeast
--'  23  7  ~/CentOS.yaml
--'  24  0  ~/CentOS.yaml
--'  22  0  ~/Ubuntu.yaml
--'  12  2  ~/nginx_install.yaml
--'  21  4  ~/nginx_install.yaml
--'  19  8  ~/nginx_install.yaml
--'  18  4  ~/nginx_install.yaml
--'  11  0  ~/nginx_install.yaml
--'  16  0  ~/nginx_install.yaml
--'  16  4  ~/Ubuntu.yaml
--'  19  4  ~/CentOS.yaml
--'  20  4  ~/nginx_install.yaml
--'  52  8  ~/quiz.yaml
+-'  49  13  ~/quiz.yaml
+-'  20  0  ~/quiz.yaml
+-'  9  8  ~/quiz.yaml
+-'  2  17  ~/index.html
+-'  1  0  ~/index.html
+-'  48  4  ~/quiz.yaml
 -'  1  0  ~/quiz.yaml
--'  23  0  ~/Ubuntu.yaml
--'  15  0  ~/CentOS.yaml
--'  2  2  ~/Ubuntu.yaml
--'  14  0  ~/CentOS.yaml
--'  1  4  ~/CentOS.yaml
--'  1  0  ~/Ubuntu.yaml
--'  45  0  /etc/ansible/hosts
--'  16  0  /etc/ansible/hosts
--'  1  20  ~/nginx_install.yaml
--'  1  0  ~/nginx_install.yaml.yaml
--'  1  0  /etc/ansible/hosts
--'  1  0  ~/nginx_install.yaml.yaml
--'  45  0  /etc/ansible/hosts
--'  16  0  /etc/ansible/hosts
--'  1  0  ~/nginx_install.yaml.yaml
--'  1  0  /etc/ansible/hosts
--'  1  0  ~/nginx_install.yaml.yaml
--'  45  0  /etc/ansible/hosts
--'  16  0  /etc/ansible/hosts
--'  1  0  ~/nginx_install.yaml.yaml
--'  1  0  /etc/ansible/hosts
--'  1  0  ~/nginx_install.yaml.yaml
--'  45  0  /etc/ansible/hosts
--'  16  0  /etc/ansible/hosts
--'  1  0  ~/nginx_install.yaml.yaml
--'  1  0  /etc/ansible/hosts
--'  1  0  ~/nginx_install.yaml.yaml
--'  45  0  /etc/ansible/hosts
--'  16  0  /etc/ansible/hosts
--'  1  0  ~/nginx_install.yaml.yaml
--'  1  0  /etc/ansible/hosts
--'  1  0  ~/nginx_install.yaml.yaml
--'  45  0  /etc/ansible/hosts
--'  16  0  /etc/ansible/hosts
--'  1  0  ~/nginx_install.yaml.yaml
--'  1  0  /etc/ansible/hosts
+-'  11  6  ~/project1/roles/nginx/templates/index.j2
+-'  10  1  ~/project1/roles/nginx/templates/index.j2
+-'  11  0  ~/project1/roles/nginx/vars/main.yml
+-'  9  1  ~/project1/roles/nginx/templates/index.j2
+-'  10  0  ~/project1/roles/nginx/vars/main.yml
+-'  1  0  ~/project1/roles/nginx/templates/ma
+-'  1  0  ~/project1/roles/nginx/templates
+-'  1044  9  ~/project1/roles/nginx/vars/centos1.txt
+-'  643  13  ~/project1/roles/nginx/vars/centos1.txt
+-'  389  28  ~/project1/roles/nginx/vars/centos1.txt
+-'  387  30  ~/project1/roles/nginx/vars/centos1.txt
+-'  386  28  ~/project1/roles/nginx/vars/centos1.txt
+-'  246  49  ~/project1/roles/nginx/vars/centos1.txt
+-'  245  27  ~/project1/roles/nginx/vars/centos1.txt
+-'  4  13  ~/project1/roles/nginx/vars/centos1.txt
+-'  1665  28  ~/project1/roles/nginx/vars/centos1.txt
+-'  1663  30  ~/project1/roles/nginx/vars/centos1.txt
+-'  1662  28  ~/project1/roles/nginx/vars/centos1.txt
+-'  1522  49  ~/project1/roles/nginx/vars/centos1.txt
+-'  1521  27  ~/project1/roles/nginx/vars/centos1.txt
+-'  1280  13  ~/project1/roles/nginx/vars/centos1.txt
+-'  1027  28  ~/project1/roles/nginx/vars/centos1.txt
+-'  1025  30  ~/project1/roles/nginx/vars/centos1.txt
+-'  1024  28  ~/project1/roles/nginx/vars/centos1.txt
+-'  884  49  ~/project1/roles/nginx/vars/centos1.txt
+-'  883  27  ~/project1/roles/nginx/vars/centos1.txt
+-'  1  0  ~/project1/roles/nginx/templates/m
+-'  4  0  ~/project1/roles/nginx/vars/main.yml
+-'  9  4  ~/project1/roles/nginx/tasks/config.yml
+-'  5  0  ~/project1/roles/nginx/tasks/main.yml
+-'  1  0  ~/project1/roles/nginx/tasks/ma
+-'  7  0  ~/project1/roles/nginx/vars/main.yml
+-'  3  0  ~/project1/roles/nginx/vars/main.yml
+-'  1  0  ~/project1/roles/nginx/vars
+-'  6  4  ~/project1/nginx_install_with_roles.yml
+-'  4  4  ~/project1/roles/nginx/tasks/config.yml
+-'  2  0  ~/project1/roles/nginx/tasks/main.yml
+-'  5  4  ~/project1/roles/nginx/handlers/main.yml
+-'  2  0  ~/project1/roles/nginx/handlers/main.yml
+-'  5  4  ~/project1/roles/nginx/tasks/config.yml
+-'  3  2  ~/project1/roles/nginx/tasks/main.yml
+-'  23  0  ~/project1/nginx_install.yaml
+-'  9  0  ~/project1/nginx_install.yaml
+-'  1  0  ~/project1/nginx_install.yaml
+-'  12  0  ~/project1/roles/nginx/templates/index.j2
+-'  2  42  ~/project1/roles/nginx/tasks/CentOS.yml
+-'  4  2  ~/project1/roles/nginx/tasks/CentOS.yml
+-'  9  16  ~/project1/roles/nginx/vars/main.yml
+-'  12  0  ~/project1/roles/nginx/vars/main.yml
+-'  1  0  ~/project1/roles/nginx/vars/m
+-'  7  4  ~/ansible0129/roles/nginx/templates/index.j2
+-'  6  1  ~/ansible0129/roles/nginx/templates/index.j2
+-'  1  0  ~/ansible0129/roles/nginx/templates
+-'  3  13  ~/ansible0129/nginx_install_with_roles.yml
+-'  1  0  ~/ansible0129/nginx_install_with_roles.yml
+-'  9  0  ~/ansible0129/roles/nginx/templates/index.j2
+-'  9  16  ~/ansible0129/roles/nginx/vars/main.yml
+-'  10  0  ~/ansible0129/roles/nginx/vars/main.yml
+-'  1  0  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  213  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  1  0  ~/ansible0129/roles/nginx/templates/index.j2
+-'  406  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  405  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  404  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  403  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  402  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  328  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  407  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  408  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  413  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  414  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  415  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  416  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  417  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  488  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  489  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  490  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  491  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  492  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  493  8  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  254  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  228  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  227  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  226  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  225  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  220  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  219  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  218  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  217  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  216  9  ~/ansible0129/roles/nginx/vars/centos1.txt
+-'  215  9  ~/ansible0129/roles/nginx/vars/centos1.txt
 
 # History of marks within files (newest to oldest):
 
-> ~/pquiz.yaml
-	"	52	4
-	^	66	20
-	.	31	0
-	+	66	0
-	+	32	0
-	+	31	0
+> ~/quiz.yaml
+	"	49	13
+	^	20	0
+	.	19	22
+	+	15	21
+	+	10	0
+	+	10	4
+	+	12	3
+	+	10	21
+	+	7	22
+	+	10	22
+	+	19	22
 
 > ~/index.html
-	"	1	10
-	^	1	11
-	.	1	10
-	+	1	10
+	"	2	17
+	^	2	20
+	.	2	17
+	+	2	17
 
-> ~/quiz.yaml
-	"	19	10
-	^	42	9
-	.	42	9
-	+	63	0
-	+	5	1
-	+	6	0
-	+	7	26
-	+	11	17
-	+	19	0
-	+	14	0
-	+	14	0
-	+	14	6
-	+	14	22
-	+	23	0
-	+	22	7
-	+	22	0
-	+	20	6
-	+	2	33
-	+	7	27
-	+	14	21
-	+	14	37
-	+	17	22
-	+	15	6
-	+	14	22
-	+	19	0
-	+	31	25
-	+	32	0
-	+	35	36
-	+	33	0
-	+	34	6
-	+	37	40
-	+	40	0
-	+	38	6
-	+	46	31
-	+	40	30
-	+	42	9
-
-> ~/quiz11.yml
-	"	1	0
-
-> ~/nginx_install.yaml
-	"	25	21
-	^	25	22
-	.	25	21
-	+	1	20
-	+	1	10
-	+	1	7
-	+	1	63
-	+	1	55
-	+	1	40
-	+	1	32
-	+	1	61
-	+	1	41
-	+	1	3
-	+	25	24
-	+	10	23
-	+	11	0
-	+	11	0
-	+	11	0
-	+	16	40
-	+	17	2
-	+	20	2
-	+	12	0
+> ~/project1/roles/nginx/templates/index.j2
+	"	11	6
+	^	11	7
+	.	10	8
+	+	12	7
 	+	13	0
-	+	14	0
-	+	15	0
-	+	16	0
-	+	20	0
-	+	18	0
-	+	19	6
-	+	21	0
+	+	4	6
+	+	3	27
+	+	12	7
+	+	7	20
+	+	8	0
+	+	8	0
+	+	8	0
+	+	5	6
+	+	7	0
+	+	6	0
+	+	7	0
+	+	6	10
+	+	8	23
+	+	12	13
+	+	12	13
+	+	12	13
 	+	12	0
+	+	11	0
+	+	9	10
 	+	10	0
-	+	25	21
+	+	10	9
+	+	9	8
+	+	10	8
 
-> ~/Ubuntu.yaml
-	"	12	4
-	^	20	7
-	.	20	7
-	+	1	91
-	+	1	22
-	+	10	102
-	+	1	1
-	+	10	17
-	+	15	17
-	+	12	15
-	+	16	14
-	+	23	14
-	+	23	0
-	+	23	0
-	+	23	0
-	+	23	0
-	+	16	10
-	+	23	0
-	+	21	49
-	+	20	7
+> ~/project1/roles/nginx/vars/main.yml
+	"	11	0
+	^	11	77
+	.	10	74
+	+	3	0
+	+	2	0
+	+	3	60
+	+	7	74
+	+	9	30
+	+	8	35
+	+	7	5
+	+	3	49
+	+	9	0
+	+	12	0
+	+	7	46
+	+	8	45
+	+	10	62
+	+	10	63
+	+	12	4
+	+	11	0
+	+	12	0
+	+	11	56
+	+	10	72
+	+	11	73
+	+	10	74
 
-> /usr/share/vim/vim74/doc/help.txt
+> ~/project1/roles/nginx/templates/ma
 	"	1	0
 
-> ~/group_vars/koreaeast
-	"	1	19
-	^	1	29
-	.	1	22
-	+	1	22
+> ~/project1/roles/nginx/vars/centos1.txt
+	"	1044	9
+	n	246	49
 
-> ~/CentOS.yaml
-	"	23	7
-	^	23	8
-	.	23	7
-	+	1	14
-	+	1	91
-	+	1	28
-	+	1	102
-	+	1	0
-	+	1	0
-	+	1	28
-	+	13	102
-	+	13	17
-	+	19	14
-	+	16	9
-	+	17	19
-	+	24	48
-	+	23	6
-	+	24	0
-	+	23	7
+> ~/project1/roles/nginx/templates/m
+	"	1	0
 
-> /etc/ansible/hosts
-	"	45	0
+> ~/project1/roles/nginx/tasks/config.yml
+	"	9	4
+	^	9	6
+	.	9	0
+	+	10	1
+	+	9	18
+	+	10	0
+	+	9	0
 
-> ~/nginx_install.yaml.yaml
+> ~/project1/roles/nginx/tasks/main.yml
+	"	5	0
+	^	6	27
+	.	6	26
+	+	7	1
+	+	2	38
+	+	3	36
+	+	6	26
+
+> ~/project1/roles/nginx/tasks/ma
+	"	1	0
+
+> ~/project1/nginx_install_with_roles.yml
+	"	6	4
+	^	3	14
+	.	6	10
+	+	6	20
+	+	3	13
+	+	6	10
+
+> ~/project1/roles/nginx/handlers/main.yml
+	"	5	4
+	^	2	10
+	.	2	9
+	+	5	19
+	+	2	9
+
+> ~/project1/nginx_install.yaml
+	"	23	0
+
+> ~/project1/roles/nginx/tasks/CentOS.yml
+	"	2	42
+	^	2	29
+	.	2	28
+	+	3	0
+	+	3	44
+	+	4	56
+	+	2	28
+
+> ~/project1/roles/nginx/vars/m
+	"	1	0
+
+> ~/ansible0129/roles/nginx/templates/index.j2
+	"	7	4
+	.	7	4
+	+	9	15
+	+	9	0
+	+	9	0
+	+	7	4
+
+> ~/ansible0129/nginx_install_with_roles.yml
+	"	3	13
+
+> ~/ansible0129/roles/nginx/vars/main.yml
+	"	9	16
+	.	10	0
+	+	10	1
+	+	10	0
+
+> ~/ansible0129/roles/nginx/vars/centos1.txt
+	"	1	0
+
+> ~/ansible0129/roles/nginx/vars/m
 	"	1	0

@@ -4,10 +4,17 @@
   become: true
  
   tasks:
-    - name: install packages
+    - name: install git
       yum:
         name: git
+        state: present
+
+    - name: install httpd
+      yum:
         name: httpd
+        state: present
+    - name: install curl
+      yum:
         name: curl
         state: present
 
@@ -30,20 +37,12 @@
         update: yes
       register: git_result
 
-    - name: Display Git status
-      debug:
-        var: git_result.stdout_lines
-
-    - name: git 변경 확인하고 pull
+    - name: git 변경 확인하고 trigger
       debug:
         msg: "Changes pulled from Git repository"
       when: git_result.changed
       notify:
         - triggers1
-
-    - name: Display debug information
-      ansible.builtin.debug:
-        var: local_ansible_html
 
   handlers:
     - name: triggers1

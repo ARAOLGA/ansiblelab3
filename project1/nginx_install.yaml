@@ -1,19 +1,16 @@
 ---
 - name: nginx 설치
-  hosts: all
+  hosts: nodes
   become: yes
 
   vars:
+    ostype: "{{ ansible_distribution }}"
+    nu: "{{ groups.nodes | count }}" # nodes 그룹에 포함된 호스트 숫자 세기 (5)
+    idx: "{{ groups.nodes.index(inventory_hostname)+1 | int }}" # 10.10.10.11 -> 1
     lnx_name: "{{ 'CentOS' if ansible_distribution == 'CentOS'
                    else 'Ubuntu' if ansible_distribution == 'Ubuntu'
                    else 'ETC' }}"
-#    test_var: "playbook"
-
   tasks:
-#    - name: 
-#      debug: 
-#        msg:
-#          - "{{ ansible_hostname }} : {{ test_var }}"
   
     - name: 변수에 따른 배포판과 작업파일  선택
       include_tasks: "{{ lnx_name }}.yaml"

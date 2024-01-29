@@ -5,10 +5,11 @@
   action: "{{ ansible_pkg_mgr }} name=nginx state=present"
 
 - name: curl nginx.com
-  get_url:
-    url: https://www.nginx.com
+  template:
+    src: index.j2
     dest: /usr/share/nginx/html/index.html
     mode: 0644
+    backup: yes
   notify:
     - restart web # curl 로 끌어온 내용에 변경이 있다면 'restart web' 실행해라!
 
@@ -17,8 +18,3 @@
     name: firewalld
     state: stopped
     enabled: no
-
-- name: 변수 출력
-  debug: 
-    msg:
-      - "{{ ansible_hostname }} : {{ test_var }}"
