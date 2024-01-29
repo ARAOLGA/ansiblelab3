@@ -7,14 +7,8 @@
     lnx_name: "{{ 'CentOS' if ansible_distribution == 'CentOS'
                    else 'Ubuntu' if ansible_distribution == 'Ubuntu'
                    else 'ETC' }}"
-#    test_var: "playbook"
 
   tasks:
-#    - name: 
-#      debug: 
-#        msg:
-#          - "{{ ansible_hostname }} : {{ test_var }}"
-  
     - name: 변수에 따른 배포판과 작업파일  선택
       include_tasks: "{{ lnx_name }}.yaml"
 
@@ -22,4 +16,4 @@
     - name: restart web
       service:
         name: nginx
-        state: stopped
+        state: restarted
