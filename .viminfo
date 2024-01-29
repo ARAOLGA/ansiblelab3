@@ -89,9 +89,9 @@ $
 	b
 
 # File marks:
-'0  49  13  ~/quiz.yaml
-'1  20  0  ~/quiz.yaml
-'2  2  17  ~/index.html
+'0  2  0  ~/index.html
+'1  49  13  ~/quiz.yaml
+'2  20  0  ~/quiz.yaml
 '3  9  15  ~/quiz.yaml
 '4  48  0  ~/quiz.yaml
 '5  11  6  ~/project1/roles/nginx/templates/index.j2
@@ -101,10 +101,10 @@ $
 '9  1  0  ~/project1/roles/nginx/templates/ma
 
 # Jumplist (newest first):
+-'  2  0  ~/index.html
 -'  49  13  ~/quiz.yaml
 -'  20  0  ~/quiz.yaml
 -'  9  8  ~/quiz.yaml
--'  2  17  ~/index.html
 -'  1  0  ~/index.html
 -'  48  4  ~/quiz.yaml
 -'  1  0  ~/quiz.yaml
@@ -198,9 +198,14 @@ $
 -'  218  9  ~/ansible0129/roles/nginx/vars/centos1.txt
 -'  217  9  ~/ansible0129/roles/nginx/vars/centos1.txt
 -'  216  9  ~/ansible0129/roles/nginx/vars/centos1.txt
--'  215  9  ~/ansible0129/roles/nginx/vars/centos1.txt
 
 # History of marks within files (newest to oldest):
+
+> ~/index.html
+	"	2	0
+	^	2	20
+	.	2	17
+	+	2	17
 
 > ~/quiz.yaml
 	"	49	13
@@ -214,12 +219,6 @@ $
 	+	7	22
 	+	10	22
 	+	19	22
-
-> ~/index.html
-	"	2	17
-	^	2	20
-	.	2	17
-	+	2	17
 
 > ~/project1/roles/nginx/templates/index.j2
 	"	11	6
